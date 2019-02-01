@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mariadb:
+    container_name: replication
+    restart: "no"
+    build: ./mariadb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=test_user
+      - MYSQL_PASSWORD=test
