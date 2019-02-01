@@ -41,8 +41,8 @@ The switch is completed and the data is transferred from the new master to the n
 docker-compose.yml:
 
       *- MYSQL_ROOT_PASSWORD=test
-      *- MYSQL_DATABASE=django_star
-      *- MYSQL_USER=star
+      *- MYSQL_DATABASE=mydb
+      *- MYSQL_USER=test_user
       *- MYSQL_PASSWORD=test
 
 ## Built With
