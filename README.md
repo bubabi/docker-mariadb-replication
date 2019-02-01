@@ -10,7 +10,9 @@ MariaDB standard master-slave replication and fail-over with Docker. The replica
 ./repel.sh --setup --master
 ```
 
-#### Slave Server 
+#### Slave Server
+
+Slave runs **read_only=1** mode to ensure that slaves accept updates only from the master server and not from clients.
 
 ```
 ./repel.sh --setup --slave <MASTER_IP>
