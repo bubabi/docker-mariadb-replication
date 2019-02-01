@@ -39,12 +39,14 @@ The switch is completed and the data is transferred from the new master to the n
 
 #### Environment variables
 docker-compose.yml:
-
-      *- MYSQL_ROOT_PASSWORD=test
-      *- MYSQL_DATABASE=mydb
-      *- MYSQL_USER=test_user
-      *- MYSQL_PASSWORD=test
-
+```
+...
+environment:
+     MYSQL_ROOT_PASSWORD=test
+     MYSQL_DATABASE=mydb
+     MYSQL_USER=test_user
+     MYSQL_PASSWORD=test
+```
 ## Built With
 
 * [MariaDB](https://mariadb.org/about/) - the database management system used
