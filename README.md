@@ -1,16 +1,16 @@
 # docker-mariadb-replication
 ![repel](https://liquipedia.net/commons/images/thumb/e/ee/Omniknight_degen_aura.png/50px-Omniknight_degen_aura.png)
 
-MariaDB standard master-slave replication and fail-over with Docker 
+MariaDB standard master-slave replication and fail-over with Docker. The replication can run on two remote servers. In addition, master and slave roles can be switching between servers for testing fail-over.
 
 ## Set up Replication 
-#### On Master Server
+#### Master Server
 
 ```
 ./repel.sh --setup --master
 ```
 
-#### On Slave Server 
+#### Slave Server 
 
 ```
 ./repel.sh --setup --slave <MASTER_IP>
@@ -22,13 +22,13 @@ Set-up is finished, you can test your replication by writing any data in the dat
 
 Make sure your tables are locked on master also make sure that no data is written to the master before the switching and follow the steps in order.
 
-#### On Slave Server 
+#### Slave Server 
 
 ```
 ./repel.sh --switch to-master
 ```
 
-#### On Master Server
+#### Master Server
 
 ```
 ./repel.sh --switch to-slave <SLAVE_IP>
@@ -45,10 +45,17 @@ docker-compose.yml:
       *- MYSQL_USER=star
       *- MYSQL_PASSWORD=test
 
-
 ## Built With
 
 * [MariaDB](https://mariadb.org/about/) - the database management system used
 * [Docker](https://www.docker.com/why-docker) - performs operating-system-level virtualization, also known as "containerization"
 
-Thanks for contributing to <a href="https://github.com/armut" target="blank">`Abdullah Akalın`</a> 
+
+#### References
+
+* https://github.com/vbabak/docker-mysql-master-slave
+
+* https://github.com/bergerx/docker-mysql-replication
+
+
+:tada: Thanks for contributing to <a href="https://github.com/armut" target="blank">`Abdullah Akalın`</a> 
