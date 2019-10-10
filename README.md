@@ -54,12 +54,4 @@ environment:
 * [MariaDB](https://mariadb.org/about/) - the database management system used
 * [Docker](https://www.docker.com/why-docker) - performs operating-system-level virtualization, also known as "containerization"
 
-
-#### References
-
-* https://github.com/vbabak/docker-mysql-master-slave
-
-* https://github.com/bergerx/docker-mysql-replication
-
-
 :tada: Thanks for contributing to <a href="https://github.com/armut" target="blank">`Abdullah Akalın`</a> 
